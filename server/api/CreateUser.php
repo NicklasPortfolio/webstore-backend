@@ -1,7 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:8081");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
+require_once("../includes/headers.php");
 require_once("../includes/database.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {

@@ -20,7 +20,7 @@ function createNewUser($email, $password, $tel) {
     $stmt->bind_param("ssi", $email, $encryptedPass, $tel);
 
     if (!$stmt->execute()) {
-        echo 'Error occured: ' . $conn->error;
+        echo 'Error occured while creating user: ' . $conn->error;
         http_response_code(500);
     }
 
